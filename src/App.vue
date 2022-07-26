@@ -1,32 +1,18 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <router-view />
+
+    <van-tabbar route>
+      <van-tabbar-item replace to="/Personnel" icon="home-o"
+        >办公</van-tabbar-item
+      >
+      <van-tabbar-item replace to="/schedule" icon="search"
+        >日程</van-tabbar-item
+      >
+      <van-tabbar-item replace to="/ipa" icon="home-o">通讯录</van-tabbar-item>
+      <van-tabbar-item replace to="/my" icon="search">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>
